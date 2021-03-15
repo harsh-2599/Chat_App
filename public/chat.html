@@ -1,3 +1,4 @@
+<!-- Chat window -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +17,7 @@
                 
                 <div class="compose">
                     <form id="message-form">
+                        <!-- required for compulsory and autocomplete for stopping suggestions-->
                         <input name="message", placeholder="Enter your text here" required autocomplete="off"> 
                         <button id="textButton">Submit</button>
                     </form>
@@ -48,9 +50,11 @@
             <h2 class = "room-title"> {{room}} </h2>
             <h3 class = "list-title"> Users </h3>
             <ul class = "users">
+                <!-- Here there are list of users so it is written like this-->
+                <!--List starts-->
                 {{#users}}
                     <li> {{username}} </li>
-                {{/users}}
+                {{/users}} <!--List ends here-->
             </ul>   
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>

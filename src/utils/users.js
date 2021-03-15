@@ -1,10 +1,10 @@
-const users = []
+const users = [] // Array of all users
 
+// Function for adding user
 const addUser = ({id,username,room})=>{
     
     //Validating Data
     if(!username || !room){
-        console.log("In first");
         return {
             error : 'Username and room are required'
         }
@@ -32,7 +32,7 @@ const addUser = ({id,username,room})=>{
     return { user}
 }
 
-
+// Function for removing the user from array
 const removeUser = (id)=>{
     const index = users.findIndex((user) =>{
         return user.id === id
@@ -43,10 +43,12 @@ const removeUser = (id)=>{
     }
 }
 
+// Function for viewing any user by id
 const getUser = (id) =>{
     return users.find((user)=>user.id === id)
 }
 
+// Function for getting info about all users in a room
 const getUsersInRoom = (room)=>{
     room = room.trim().toLowerCase()
     return users.filter((user)=>user.room === room)

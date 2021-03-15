@@ -1,3 +1,4 @@
+// Generate messages by appending time
 const generateMessage = (username,text)=>{
     return {
         username,
